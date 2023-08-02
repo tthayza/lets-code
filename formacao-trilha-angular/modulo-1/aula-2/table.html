@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        background-color: rgb(228, 213, 187);
+        font-family: sans-serif;
+      }
+
+      header {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: rgb(165, 35, 46);
+      }
+
+      img {
+        border-radius: 100%;
+      }
+
+      table {
+        border: 3px dotted salmon;
+        border-collapse: separate;
+        width: 50%;
+        margin: 25px;
+      }
+
+      span {
+        display: block;
+        color: crimson;
+        margin-top: 4px;
+      }
+
+      table th,
+      table td {
+        padding: 10px;
+      }
+
+      table th {
+        background-color: salmon;
+        color: white;
+      }
+
+      table tr td:nth-child(1) {
+        background-color: rgb(245, 222, 222);
+        color: rgb(235, 88, 39);
+        padding: 0 30px;
+      }
+
+      table tr:nth-child(even) {
+        background-color: bisque;
+      }
+
+      table tr:nth-child(odd) {
+        background-color: rgb(245, 198, 179);
+      }
+
+      table tr:nth-last-child(2) {
+        font-weight: 700;
+      }
+      table .last td {
+        color: cadetblue;
+      }
+
+      table tr td {
+        border: 1px solid salmon;
+        color: crimson;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h3>Relatório Financeiro de Fluxo de Caixa</h3>
+        <p>Situação: Ambos, Intervalo de: 02/2019 a 06/2019</p>
+        <h3>Conta: CONTA PRINCIPAL</h3>
+      </div>
+      <div>
+        <img src="./logo.jpg" alt="logo" width="100px" />
+      </div>
+    </header>
+    <table class="table">
+      <tr>
+        <th rowspan="2">
+          Salário Inicial:
+
+          <span>14.801,43</span>
+        </th>
+        <th colspan="2">Fevereiro/19</th>
+        <th colspan="2">Março/19</th>
+        <th colspan="2">Abril/19</th>
+        <th colspan="2">Maio/19</th>
+        <th colspan="2">Junho/19</th>
+      </tr>
+      <tr>
+        <th>PREV</th>
+        <th>REAL</th>
+        <th>PREV</th>
+        <th>REAL</th>
+        <th>PREV</th>
+        <th>REAL</th>
+        <th>PREV</th>
+        <th>REAL</th>
+        <th>PREV</th>
+        <th>REAL</th>
+      </tr>
+
+      <tr>
+        <td>Receitas</td>
+        <td>10.500,00</td>
+        <td>5.600,00</td>
+        <td>10.900,00</td>
+        <td>0,00</td>
+        <td>10.900,00</td>
+        <td>10.900,00</td>
+        <td>10.900,00</td>
+        <td>10.900,00</td>
+        <td>10.900,00</td>
+        <td>10.900,00</td>
+      </tr>
+      <tr>
+        <td>Despesas</td>
+        <td>1.050,00</td>
+        <td>50,00</td>
+        <td>1.000,00</td>
+        <td>0,00</td>
+        <td>1.000,00</td>
+        <td>1.000,00</td>
+        <td>1.000,00</td>
+        <td>1.000,00</td>
+        <td>1.000,00</td>
+        <td>1.000,00</td>
+      </tr>
+      <tr>
+        <td>Saldo mês</td>
+        <td>9.450,00</td>
+        <td>5.550,00</td>
+        <td>9.900,00</td>
+        <td>0,00</td>
+        <td>4.800,00</td>
+        <td>400,00</td>
+        <td>520,00</td>
+        <td>1.405,00</td>
+        <td>1.406,00</td>
+        <td>1.405,90</td>
+      </tr>
+      <tr class="last">
+        <td>Saldo Acumulado</td>
+        <td>24.251,43</td>
+        <td>20.351,43</td>
+        <td>34.151,43</td>
+        <td>20.351,43</td>
+        <td>38.951,43</td>
+        <td>20.351,43</td>
+        <td>20.351,43</td>
+        <td>20.351,43</td>
+        <td>20.351,43</td>
+        <td>20.351,43</td>
+      </tr>
+    </table>
+  </body>
+</html>
