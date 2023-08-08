@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+      input {
+        width: 45px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <h2>Autora: Thayza Oliveira</h2>
+    <hr />
+    <input type="number" id="first-operator" placeholder="0" />
+
+    <select name="" id="operations">
+      <option value="add">+ (adição)</option>
+      <option value="sub">- (subtração)</option>
+      <option value="mul">* (multiplicação)</option>
+      <option value="div">/ (divisão)</option>
+      <option value="pot">** (potenciação)</option>
+    </select>
+
+    <input type="number" id="second-operator" placeholder="0" />
+    <input type="button" value="=" readonly onclick="calcular()" />
+    <input type="number" id="result" placeholder="0" disabled />
+    <hr />
+    <script src="./calculadora.js"></script>
+  </body>
+</html>
