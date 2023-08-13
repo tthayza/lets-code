@@ -1,8 +1,5 @@
 console.log('-- Calculadora rodando --')
 
-const first = document.getElementById('first-operator')
-const second = document.getElementById('second-operator')
-
 const calcular = function () {
   console.log('vai calcular')
   const n1 = Number(document.getElementById('first-operator').value) || 0
