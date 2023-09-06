@@ -8,3 +8,5 @@
 - <a href="https://github.com/tthayza/cadastro-clientes"> Cadastro de Clientes 📑</a>
 - <a href="https://github.com/tthayza/comparador-logico"> Comparador Lógico </a>
 - <a href="https://github.com/tthayza/cadastro-produtos"> Cadastro de Produtos </a>
+- <a href="https://github.com/tthayza/gerenciamento-bancario"> Gerenciamento Bancário </a>
+- <a href="https://github.com/tthayza/to-do-list"> To-Do List </a>
