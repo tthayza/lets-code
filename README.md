@@ -10,3 +10,6 @@
 - <a href="https://github.com/tthayza/cadastro-produtos"> Cadastro de Produtos </a>
 - <a href="https://github.com/tthayza/gerenciamento-bancario"> Gerenciamento Bancário </a>
 - <a href="https://github.com/tthayza/to-do-list"> To-Do List </a>
+- <a href="https://github.com/tthayza/tech-medical"> Gerenciamento Hospitalar </a>
+- <a href="https://github.com/tthayza/audioapi"> Produção Musical </a>
+- <a href="https://github.com/tthayza/ProjetoFinalADA"> Valorant Info </a>
