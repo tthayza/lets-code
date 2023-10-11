@@ -19,11 +19,11 @@
       <!-- End Carousel -->
 
       <!-- Features -->
-      <app-features></app-features>
+      <app-features [featuresData]="featuresData"></app-features>
       <!-- End Features -->
 
       <!-- About -->
-      <app-about></app-about>
+      <app-about [aboutData]="aboutData"> </app-about>
       <!-- End About -->
 
       <!-- Address -->
@@ -43,7 +43,7 @@
     <!-- End Main -->
     <app-contact></app-contact>
     <!-- Footer -->
-    <app-footer></app-footer>
+    <app-footer [footerData]="footerData"></app-footer>
     <!-- End Footer -->
   </body>
 </html>
