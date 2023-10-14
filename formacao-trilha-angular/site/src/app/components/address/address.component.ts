@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-address',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./address.component.scss'],
 })
 export class AddressComponent {
+  @Input() address1!: any;
   address: any = {
     street: 'QL 2 Bloco A',
     number: 306,

@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent {
-  @Input() public aboutData!: any;
+  @Input() public aboutData: any = '';
 }
