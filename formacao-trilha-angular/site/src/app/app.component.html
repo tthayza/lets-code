@@ -7,8 +7,13 @@
     <title>Document</title>
   </head>
   <body>
+    <ul>
+      <li *ngFor="let fruta of frutas; index as indice">
+        {{ indice }} Nome: {{ fruta.nome }} e Cor: {{ fruta.cor }}
+      </li>
+    </ul>
     <!-- Navbar -->
-    <app-header></app-header>
+    <app-header (logout)="logout()" [tipoUsuario]="tipoUsuario"></app-header>
 
     <!-- End Navbar -->
 
@@ -19,15 +24,19 @@
       <!-- End Carousel -->
 
       <!-- Features -->
-      <app-features [featuresData]="featuresData"></app-features>
+      <app-features
+        [backgroundcolor]="novaCorBackground"
+        [featuresData]="data.features"
+        [featuresData]="data.features"
+      ></app-features>
       <!-- End Features -->
 
       <!-- About -->
-      <app-about [aboutData]="aboutData"> </app-about>
+      <app-about [aboutData]="data.about"> </app-about>
       <!-- End About -->
 
       <!-- Address -->
-      <app-address></app-address>
+      <app-address [address]="data.address.data"></app-address>
       <!-- End Address -->
 
       <!-- Contact -->
@@ -41,9 +50,12 @@
       </div>
     </main>
     <!-- End Main -->
-    <app-contact></app-contact>
+    <app-contact
+      (sendFormData)="validarFormulario($event)"
+      (movimentoEnvioForm)="movimentoEnvioForm()"
+    ></app-contact>
     <!-- Footer -->
-    <app-footer [footerData]="footerData"></app-footer>
+    <app-footer [footerData]="data.footer"></app-footer>
     <!-- End Footer -->
   </body>
 </html>

@@ -24,10 +24,7 @@
         rows="3"
       ></textarea>
     </div>
-    <button (click)="submitForm(contactInfo)" class="btn btn-primary">
-      Enviar
-    </button>
+    <button (click)="submitForm()" class="btn btn-primary">Enviar</button>
     <pre>Form {{ contactInfo | json }}</pre>
-    <pre>Variavel TS{{ contactInfoTS | json }}</pre>
   </div>
 </section>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ContactForm } from 'src/app/models/contact-form.model';
 
 @Component({
   selector: 'app-contact',
@@ -6,15 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+  @Output() public sendFormData = new EventEmitter<ContactForm>();
+  @Output() public movimentoEnvioForm = new EventEmitter<any>();
+
   disabledButton = true;
-  contactInfo: any = {
+  contactInfo: ContactForm = {
     email: '',
     message: '',
   };
-  contactInfoTS: any = {
-    email: '',
-    message: '',
-  };
+  // contactInfoTS: any = {
+  //   email: '',
+  //   message: '',
+  // };
   disableEmail = false;
   constructor() {
     setTimeout(() => {
@@ -26,36 +30,24 @@ export class ContactComponent {
     return !this.disabledButton;
   }
 
-  submitForm(teste123: any): void {
-    /* console.log('O Email: ' + this.contactInfo.email + ' e a Message: ' + this.contactInfo.message + ' foi envado com sucesso!!!') */
-    console.log(
-      'Antes email:' +
-        this.contactInfoTS.email +
-        ' e Message: ' +
-        this.contactInfoTS.message
-    );
-
-    this.contactInfoTS = {
-      email: teste123.email,
-      message: teste123.message,
-    };
+  submitForm(): void {
+    // console.log(
+    //   'evento emitido pelo component filho(contact) para o component pai(app.component)',
+    //   this.contactInfo
+    // );
+    this.sendFormData.emit(this.contactInfo);
+    this.movimentoEnvioForm.emit();
 
     this.contactInfo = {
       email: '',
       message: '',
     };
-    console.log(
-      'Depois email:' +
-        this.contactInfoTS.email +
-        ' e Message: ' +
-        this.contactInfoTS.message
-    );
   }
 
   testEvent(event: any): void {
-    console.log(event);
+    // console.log(event);
     if (this.contactInfo.email.endsWith('@gmail.com')) {
-      console.log('EMAIL COMPLETO');
+      // console.log('EMAIL COMPLETO');
       this.disableEmail = true;
     } else {
       this.disableEmail = false;

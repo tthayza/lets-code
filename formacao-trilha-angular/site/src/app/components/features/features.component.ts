@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FeatureData } from 'src/app/models/feature-data.model';
 
 @Component({
   selector: 'app-features',
@@ -6,5 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./features.component.scss'],
 })
 export class FeaturesComponent {
-  @Input() public featuresData!: any;
+  @Input() public featuresData!: FeatureData;
+  @Input() public backgroundcolor!: string;
+  constructor() {}
 }
