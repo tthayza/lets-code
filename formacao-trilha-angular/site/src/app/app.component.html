@@ -13,7 +13,11 @@
       </li>
     </ul>
     <!-- Navbar -->
-    <app-header (logout)="logout()" [tipoUsuario]="tipoUsuario"></app-header>
+    <app-header
+      (logout)="logout()"
+      (toggleVisibility)="toggleRenderAbout()"
+      [tipoUsuario]="tipoUsuario"
+    ></app-header>
 
     <!-- End Navbar -->
 
@@ -25,6 +29,7 @@
 
       <!-- Features -->
       <app-features
+        *ngIf=""
         [backgroundcolor]="novaCorBackground"
         [featuresData]="data.features"
         [featuresData]="data.features"
@@ -32,7 +37,8 @@
       <!-- End Features -->
 
       <!-- About -->
-      <app-about [aboutData]="data.about"> </app-about>
+      <app-about *ngIf="renderAboutSection" [aboutData]="data.about">
+      </app-about>
       <!-- End About -->
 
       <!-- Address -->

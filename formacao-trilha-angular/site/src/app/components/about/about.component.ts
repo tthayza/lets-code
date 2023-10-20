@@ -1,10 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
+export class AboutComponent implements OnDestroy {
   @Input() public aboutData: any = '';
+  ngOnDestroy() {
+    console.log('about destruído');
+  }
 }

@@ -8,6 +8,8 @@ import { ContactForm } from './models/contact-form.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  renderAboutSection: boolean = true;
+  mostraFeature = false;
   title = 'site';
   frutas = [
     {
@@ -101,5 +103,9 @@ export class AppComponent {
 
   movimentoEnvioForm() {
     // console.log('formulário enviado às', new Date());
+  }
+
+  toggleRenderAbout() {
+    this.renderAboutSection = !this.renderAboutSection;
   }
 }

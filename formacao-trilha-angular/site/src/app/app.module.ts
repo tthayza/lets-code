@@ -10,6 +10,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ColorchangeDirective } from './directives/color-change/color-change.directive';
+import { HighlightDirective } from './directives/highlight/highligh.directive';
+import { UnderlineDirective } from './directives/underline/underline.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { HeaderComponent } from './components/header/header.component';
     AddressComponent,
     ContactComponent,
     FooterComponent,
+    HighlightDirective,
+    UnderlineDirective,
+    ColorchangeDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

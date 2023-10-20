@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FeatureData } from 'src/app/models/feature-data.model';
 
 @Component({
@@ -6,8 +6,37 @@ import { FeatureData } from 'src/app/models/feature-data.model';
   templateUrl: './features.component.html',
   styleUrls: ['./features.component.scss'],
 })
-export class FeaturesComponent {
+export class FeaturesComponent implements OnInit {
   @Input() public featuresData!: FeatureData;
   @Input() public backgroundcolor!: string;
-  constructor() {}
+  constructor() {
+    console.log('construtor');
+  }
+
+  ngOnChanges(): void {
+    console.log('onchanges');
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit');
+  }
+
+  ngDoCheck(): void {
+    console.log('doCheck');
+  }
+  ngAfterContentInit(): void {
+    console.log('aftercontentinit');
+  }
+  ngAfterContentChecked(): void {
+    console.log('aftercontentchecked');
+  }
+  ngAfterViewtInit(): void {
+    console.log('afterviewinit');
+  }
+  ngAfterViewtChecked(): void {
+    console.log('afterviewchecked');
+  }
+  ngOnDestroy(): void {
+    console.log('destroy');
+  }
 }
