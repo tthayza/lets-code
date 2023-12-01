@@ -15,3 +15,4 @@
 - <a href="https://github.com/tthayza/ProjetoFinalADA"> Valorant Info </a>
 - <a href="https://github.com/DevSquad-SantanderCoders/resume-project"> Resume Project </a>
 - <a href="https://github.com/tthayza/crud-angular"> CRUD </a>
+- <a href="https://github.com/DevSquad-SantanderCoders/e-commerce"> Ecommerce </a>
